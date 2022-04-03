@@ -1,53 +1,52 @@
 # Introduction
 
-Welcome to the Electron documentation! If this is your first time developing
-an Electron app, read through this Getting Started section to get familiar with the
-basics. Otherwise, feel free to explore our guides and API documentation!
+Benvido á documentación de Electron! Se esta é a primeira vez que  desenvolves
+unha aplicación Electron, le a sección de iniciación para familiarizarse cos elementos
+básicos. Se non, non dubide en explorar as guías e a documentación da API.
 
-## What is Electron?
+## Que é Electron?
+Electron é un marco para crear aplicacións de escritorio usando JavaScript,
+HTML e CSS. Ao incorporar [Chromium][chromium] e [Node.js][node] no seu
+binario, Electron permítelle manter unha base de código JavaScript e crear
+aplicacións multiplataforma que funcionan en Windows, macOS e Linux, sen desenvolvemento nativo
 
-Electron is a framework for building desktop applications using JavaScript,
-HTML, and CSS. By embedding [Chromium][chromium] and [Node.js][node] into its
-binary, Electron allows you to maintain one JavaScript codebase and create
-cross-platform apps that work on Windows, macOS, and Linux — no native development
-experience required.
 
-## Prerequisites
+## Requisitos previos.
 
-These docs operate under the assumption that the reader is familiar with both
-Node.js and general web development. If you need to get more comfortable with
-either of these areas, we recommend the following resources:
+Estes documentos asume a previsa que o lector está familiarizado con 
+Node.js e o desenvolvemento web. Se necesitas poñerte revisar algún destes campos, recoméndase os seguintes recursos:
 
 * [Getting started with the Web (MDN)][mdn-guide]
 * [Introduction to Node.js][node-guide]
 
-Moreover, you'll have a better time understanding how Electron works if you get
-acquainted with Chromium's process model. You can get a brief overview of
-Chrome architecture with the [Chrome comic][comic], which was released alongside
-Chrome's launch back in 2008. Although it's been over a decade since then, the
-core principles introduced in the comic remain helpful to understand Electron.
+Ademais, entenderás mellor como funciona Electron se o consigues
+familiarizado co modelo de proceso de Chromium. Podes obter unha breve visión xeral de
+Arquitectura de Chrome co [Chrome comic][comic], que se lanzou xunto
+Lanzamento de Chrome en 2008. Aínda que pasou máis dunha década desde entón, o
+Os principios fundamentais introducidos no cómic seguen sendo útiles para comprender a Electron.
 
-## Running examples with Electron Fiddle
 
-[Electron Fiddle][fiddle] is a sandbox app written with Electron and supported by
-Electron's maintainers. We highly recommend installing it as a learning tool to
-experiment with Electron's APIs or to prototype features during development.
+## Executar exemplos con  Electron Fiddle
 
-Fiddle also integrates nicely with our documentation. When browsing through examples
-in our tutorials, you'll frequently see an "Open in Electron Fiddle" button underneath
-a code block. If you have Fiddle installed, this button will open a
-`fiddle.electronjs.org` link that will automatically load the example into Fiddle,
-no copy-pasting required.
+[Electron Fiddle][fiddle]é unha aplicación sandbox escrita con Electron e compatible con
+Mantedores de electron. Recomendamos  instalalo como ferramenta de aprendizaxe para
+experimentar coas API de Electron ou crear prototipos de funcións durante o desenvolvemento.
 
-## Getting help
 
-Are you getting stuck anywhere? Here are a few links to places to look:
+Fiddle tamén se integra con esta documentación. Ao navegar terás exemplos
+nos  titoriais, verás con frecuencia un botón "Abrir en Electron Fiddle" debaixo
+un bloque de código. Se tes Fiddle instalado, este botón abrirá un
+ligazón `fiddle.electronjs.org` que cargará automaticamente o exemplo en Fiddle,
+non é necesario copiar e pegar.
 
-* If you need help with developing your app, our [community Discord server][discord]
-is a great place to get advice from other Electron app developers.
-* If you suspect you're running into a bug with the `electron` package, please check
-the [GitHub issue tracker][issue-tracker] to see if any existing issues match your
-problem. If not, feel free to fill out our bug report template and submit a new issue.
+
+## Conseguir axuda
+
+Estás atascado en algún lugar? Aquí tes algúns enlaces a lugares onde buscar:
+
+* Se precisas axuda para desenvolver a túa aplicación, a nosa [comunidade Discord server][discord] é un excelente lugar para obter consellos doutros desenvolvedores de aplicacións Electron.
+* Se sospeitas que tes un erro con `electron` package, comproba 
+o [GitHub issue tracker][issue-tracker] para ver se hai algún problema  coincidente co teu problema. Se non, non dubide en cubrir o noso modelo de informe de erros e enviar un novo problema.
 
 [chromium]: https://www.chromium.org/
 [node]: https://nodejs.org/
