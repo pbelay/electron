@@ -1,32 +1,28 @@
-# Official Guides
+# Guías oficiales
 
-Please make sure that you use the documents that match your Electron version.
-The version number should be a part of the page URL. If it's not, you are
-probably using the documentation of a development branch which may contain API
-changes that are not compatible with your Electron version. To view older
-versions of the documentation, you can
-[browse by tag](https://github.com/electron/electron/tree/v1.4.0)
-on GitHub by opening the "Switch branches/tags" dropdown and selecting the tag
-that matches your version.
+Asegúrate de utilizar os documentos que coincidan coa túa versión de Electron. O número de versión debería formar parte do URL da páxina. Se non o é, estás
+probablemente usando a documentación dunha rama de desenvolvemento que pode conter API
+cambios que non son compatibles coa súa versión de Electron. Para ver a versión máis antiga da documentación, podes [navegar pola etiqueta](https://github.com/electron/electron/tree/v1.4.0)
+en GitHub abrindo o menú despregable "Cambiar ramas/etiquetas" e seleccionando a etiqueta
+que coincida coa túa versión.
 
 ## FAQ
 
-There are questions that are asked quite often. Check this out before creating
-an issue:
+Hai preguntas que se fan con bastante frecuencia. Comprobe isto antes de crear
 
 * [Electron FAQ](faq.md)
 
-## Guides and Tutorials
+## Guías e titoriais
 
-### Getting started
+### Comezando
 
-* [Introduction](tutorial/introduction.md)
-* [Quick Start](tutorial/quick-start.md)
+* [Introdución](tutorial/introduction.md)
+* [Inicio rápido](tutorial/quick-start.md)
 * [Process Model](tutorial/process-model.md)
 
-### Learning the basics
+### Aprender o básico.
 
-* Adding Features to Your App
+* Engadindo funcións á túa aplicación: 
   * [Notifications](tutorial/notifications.md)
   * [Recent Documents](tutorial/recent-documents.md)
   * [Application Progress](tutorial/progress-bar.md)
@@ -47,9 +43,9 @@ an issue:
   * [electron-react-boilerplate](tutorial/boilerplates-and-clis.md#electron-react-boilerplate)
   * [Other Tools and Boilerplates](tutorial/boilerplates-and-clis.md#other-tools-and-boilerplates)
 
-### Advanced steps
+### Pasos avanzados
 
-* Application Architecture
+* Arquitectura de aplicacións
   * [Using Native Node.js Modules](tutorial/using-native-node-modules.md)
   * [Performance Strategies](tutorial/performance.md)
   * [Security Strategies](tutorial/security.md)
@@ -63,35 +59,35 @@ an issue:
   * [DevTools Extension](tutorial/devtools-extension.md)
   * [Automated Testing](tutorial/automated-testing.md)
   * [REPL](tutorial/repl.md)
-* [Distribution](tutorial/application-distribution.md)
+* [Distribución](tutorial/application-distribution.md)
   * [Code Signing](tutorial/code-signing.md)
   * [Mac App Store](tutorial/mac-app-store-submission-guide.md)
   * [Windows Store](tutorial/windows-store-guide.md)
   * [Snapcraft](tutorial/snapcraft.md)
-* [Updates](tutorial/updates.md)
+* [Actualizacións](tutorial/updates.md)
   * [Deploying an Update Server](tutorial/updates.md#deploying-an-update-server)
   * [Implementing Updates in Your App](tutorial/updates.md#implementing-updates-in-your-app)
   * [Applying Updates](tutorial/updates.md#applying-updates)
 * [Getting Support](tutorial/support.md)
 
-## Detailed Tutorials
+## Titoriais detallados
 
-These individual tutorials expand on topics discussed in the guide above.
+Estes titoriais individuais amplían os temas tratados na guía anterior.
 
-* [Installing Electron](tutorial/installation.md)
+* [Instalar Electron](tutorial/installation.md)
   * [Proxies](tutorial/installation.md#proxies)
   * [Custom Mirrors and Caches](tutorial/installation.md#custom-mirrors-and-caches)
-  * [Troubleshooting](tutorial/installation.md#troubleshooting)
-* Electron Releases & Developer Feedback
+  * [Solucións a probrelmas](tutorial/installation.md#troubleshooting)
+* Lanzamentos de Electron e comentarios dos desenvolvedores
   * [Versioning Policy](tutorial/electron-versioning.md)
   * [Release Timelines](tutorial/electron-timelines.md)
 * [Testing Widevine CDM](tutorial/testing-widevine-cdm.md)
 
 ---
 
-* [Glossary of Terms](glossary.md)
+* [Glosario de termos](glossary.md)
 
-## API References
+## API de referencia
 
 * [Synopsis](api/synopsis.md)
 * [Process Object](api/process.md)
@@ -100,13 +96,13 @@ These individual tutorials expand on topics discussed in the guide above.
 * [Chrome Extensions Support](api/extensions.md)
 * [Breaking API Changes](breaking-changes.md)
 
-### Custom DOM Elements:
+### Elementos DOM personalizados:
 
 * [`File` Object](api/file-object.md)
 * [`<webview>` Tag](api/webview-tag.md)
 * [`window.open` Function](api/window-open.md)
 
-### Modules for the Main Process:
+### Módulos para o proceso principal:
 
 * [app](api/app.md)
 * [autoUpdater](api/auto-updater.md)
@@ -137,7 +133,7 @@ These individual tutorials expand on topics discussed in the guide above.
 * [webContents](api/web-contents.md)
 * [webFrameMain](api/web-frame-main.md)
 
-### Modules for the Renderer Process (Web Page):
+### Módulos para o proceso de renderizado (Páxina web):
 
 * [contextBridge](api/context-bridge.md)
 * [ipcRenderer](api/ipc-renderer.md)
@@ -151,6 +147,6 @@ These individual tutorials expand on topics discussed in the guide above.
 * [nativeImage](api/native-image.md)
 * [shell](api/shell.md)
 
-## Development
+## Desenvolvemento 
 
 See [development/README.md](development/README.md)
