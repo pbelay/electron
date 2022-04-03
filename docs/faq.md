@@ -1,69 +1,57 @@
 # Electron FAQ
 
-## Why am I having trouble installing Electron?
+## Por que teño problemas para instalar Electron?
 
-When running `npm install electron`, some users occasionally encounter
-installation errors.
+Ao executar `npm install electron`, algúns usuarios atópanse ocasionalmente erros de instalación.
 
-In almost all cases, these errors are the result of network problems and not
-actual issues with the `electron` npm package. Errors like `ELIFECYCLE`,
-`EAI_AGAIN`, `ECONNRESET`, and `ETIMEDOUT` are all indications of such
-network problems. The best resolution is to try switching networks, or
-wait a bit and try installing again.
+En case todos os casos, estes erros son o resultado de problemas de rede e non problemas reais co paquete npm `electron`. Erros como `ELIFECICLE`,  `EAI_AGAIN`, `ECONNRESET` e `ETIMEDOUT` son todos indicativos deste tipo  problemas de rede. A mellor resolución é probar a cambiar de rede ou  agarda un pouco e tenta instalar de novo.
 
-You can also attempt to download Electron directly from
-[electron/electron/releases](https://github.com/electron/electron/releases)
-if installing via `npm` is failing.
+Tamén podes tentar descargar Electron directamente dende [electron/electron/releases](https://github.com/electron/electron/releases)  se falla a instalación mediante `npm`.
 
-## When will Electron upgrade to latest Chrome?
+## Cando se actualizará Electron á última versión de Chrome?
 
-The Chrome version of Electron is usually bumped within one or two weeks after
-a new stable Chrome version gets released. This estimate is not guaranteed and
-depends on the amount of work involved with upgrading.
+A versión Chrome de Electron adoita cambiarse nunha ou dúas semanas despois lánzase unha nova versión estable de Chrome. Esta estimación non está garantida e depende da cantidade de traballo que implica a actualización.
 
-Only the stable channel of Chrome is used. If an important fix is in beta or dev
-channel, we will back-port it.
+Só se emprega a versión estable de Chrome. Se é unha mellora importante e  está en versión beta ou dev será incorporada. 
 
-For more information, please see the [security introduction](tutorial/security.md).
+Para obter máis información, consulte a [introdución á seguridade](tutorial/security.md).
 
-## When will Electron upgrade to latest Node.js?
+## Cando se actualizará Electron ao último Node.js?
 
-When a new version of Node.js gets released, we usually wait for about a month
-before upgrading the one in Electron. So we can avoid getting affected by bugs
-introduced in new Node.js versions, which happens very often.
+Cando se publica unha nova versión de Node.js, adoitamos esperar aproximadamente un mes
+antes de actualizar o de Electron. Así podemos evitar ser afectados por erros
+introducido nas novas versións de Node.js, o que ocorre con moita frecuencia.
 
 New features of Node.js are usually brought by V8 upgrades, since Electron is
-using the V8 shipped by Chrome browser, the shiny new JavaScript feature of a
+using the **V8** shipped by Chrome browser, the shiny new JavaScript feature of a
 new Node.js version is usually already in Electron.
 
-## How to share data between web pages?
+## Como compartir datos entre páxinas web?
 
-To share data between web pages (the renderer processes) the simplest way is to
-use HTML5 APIs which are already available in browsers. Good candidates are
+Para compartir datos entre páxinas web (os procesos de renderizado) o xeito máis sinxelo é empregar a API HTML5 que xa están dispoñibles nos navegadores. As boas alternativas son
 [Storage API][storage], [`localStorage`][local-storage],
-[`sessionStorage`][session-storage], and [IndexedDB][indexed-db].
+[`sessionStorage`][session-storage], e [IndexedDB][indexed-db].
 
-Alternatively, you can use the IPC primitives that are provided by Electron. To
-share data between the main and renderer processes, you can use the
-[`ipcMain`](api/ipc-main.md) and [`ipcRenderer`](api/ipc-renderer.md) modules.
-To communicate directly between web pages, you can send a
-[`MessagePort`][message-port] from one to the other, possibly via the main process
-using [`ipcRenderer.postMessage()`](api/ipc-renderer.md#ipcrendererpostmessagechannel-message-transfer).
-Subsequent communication over message ports is direct and does not detour through
-the main process.
+Alternativamente, pode usar as primitivas IPC que proporciona Electron. Para
+compartir datos entre os procesos principal e de renderizado, pode usar o
+[`ipcMain`](api/ipc-main.md) e [`ipcRenderer`](api/ipc-renderer.md) módulos.
+Para comunicarse directamente entre páxinas web, pode enviar un
+[`MessagePort`][message-port] dun a outro, posiblemente a través do proceso principal
+usando [`ipcRenderer.postMessage()`](api/ipc-renderer.md#ipcrendererpostmessagechannel-message-transfer).
 
-## My app's tray disappeared after a few minutes.
+A comunicación posterior a través dos portos de mensaxes é directa e non se desvía
+o proceso principal.
 
-This happens when the variable which is used to store the tray gets
-garbage collected.
+## A app desaparece aos poucos minutos. 
 
-If you encounter this problem, the following articles may prove helpful:
+Isto ocorre cando aparece a variable que se utiliza para almacenar e o recolector de lixo o apaña.   
+
+Se atopas este problema, os seguintes artigos poden resultar útiles:
 
 * [Memory Management][memory-management]
 * [Variable Scope][variable-scope]
 
-If you want a quick fix, you can make the variables global by changing your
-code from this:
+Se queres unha solución rápida, podes facer que as variables sexan globais cambiandoo teu código a partir deste:
 
 ```javascript
 const { app, Tray } = require('electron')
@@ -84,13 +72,13 @@ app.whenReady().then(() => {
 })
 ```
 
-## I can not use jQuery/RequireJS/Meteor/AngularJS in Electron.
+## Non podo usar jQuery/RequireJS/Meteor/AngularJS en Electron.
 
-Due to the Node.js integration of Electron, there are some extra symbols
-inserted into the DOM like `module`, `exports`, `require`. This causes problems
-for some libraries since they want to insert the symbols with the same names.
+Debido á integración de Electron con Node.js, hai algúns símbolos adicionais
+inserido no DOM como `módulo`, `exportacións`, `require`. Isto causa problemas
+para algunhas bibliotecas xa que queren inserir os símbolos co mesmo nome.
 
-To solve this, you can turn off node integration in Electron:
+Para solucionar isto, pode desactivar a integración de nodos en Electron:
 
 ```javascript
 // In the main process.
@@ -103,8 +91,7 @@ const win = new BrowserWindow({
 win.show()
 ```
 
-But if you want to keep the abilities of using Node.js and Electron APIs, you
-have to rename the symbols in the page before including other libraries:
+Pero se queres manter as capacidades de usar Node.js e as API de Electron, tes que renomear os símbolos da páxina antes de incluír outras bibliotecas:
 
 ```html
 <head>
@@ -118,7 +105,7 @@ delete window.module;
 </head>
 ```
 
-## `require('electron').xxx` is undefined.
+## `require('electron').xxx` non está definido.
 
 When using Electron's built-in module you might encounter an error like this:
 
@@ -131,7 +118,7 @@ It is very likely you are using the module in the wrong process. For example
 `electron.app` can only be used in the main process, while `electron.webFrame`
 is only available in renderer processes.
 
-## The font looks blurry, what is this and what can I do?
+## O tipo de letra parece borroso, que é isto e que podo facer?
 
 If [sub-pixel anti-aliasing](https://alienryderflex.com/sub_pixel/) is deactivated, then fonts on LCD screens can look blurry. Example:
 
